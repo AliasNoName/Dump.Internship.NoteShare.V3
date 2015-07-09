@@ -2,8 +2,8 @@
 ---   rewritten for AngularJS   ---
 
 Obavezne funkcionalnosti:
-+	Dovršiti stranicu detalja pojedinog notea. Nedostaje izlist i dodavanje komentara.
-+	Napraviti stranicu za dodavanje novog notea.
++	Dovršiti stranicu detalja pojedinog notea. Nedostaje izlist i dodavanje komentara. - DONE
++	Napraviti stranicu za dodavanje novog notea. - DONE
 -	Napraviti stranicu za uređivanje postojećeg notea.
 -	Brisanje postojećeg notea
 
