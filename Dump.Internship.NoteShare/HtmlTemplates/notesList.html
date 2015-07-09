@@ -1,0 +1,21 @@
+﻿<h1>Hello notes list</h1>
+
+<a href="#/addNote">Novi note</a>
+
+<div ng-repeat="note in notes">
+
+    <a href="#/note/{{note.Id}}">
+        <h2>{{note.Title}} </h2>
+    </a>
+
+    <div>
+        Created on: {{note.CreatedOn}}
+    </div>
+    <div>
+        Created by: {{note.Author.FullName}}
+    </div>
+    <p>
+        {{note.Text}}
+    </p>
+</div>
+

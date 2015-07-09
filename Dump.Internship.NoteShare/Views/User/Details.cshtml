@@ -1,0 +1,54 @@
+﻿@model Dump.Internship.NoteShare.Models.UserModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h3>@Model.User.FullName</h3>
+
+        
+        @if(@Model.User.IsPremiumUser)
+        {
+            <small>premium user</small>
+        }
+        <br />
+
+        <small>member since: @Model.User.CreatedOn.ToShortDateString()</small>
+
+        <br /><br />
+        <a href="/user-update/@Model.User.Id">Update</a>
+        <br />
+        <a href="/user-delete/@Model.User.Id">Delete</a>
+        <br /><br />
+
+        <h3>Notes from @Model.User.FullName:</h3>
+        <hr />
+
+        @foreach (var note in @Model.Notes)
+        {
+            <h3>@note.Title</h3>
+            <small>@note.CreatedOn.ToShortDateString()</small>
+            <p>@note.Title</p>
+            <br />
+        }
+
+        <br /><br />
+        <h3>Comments from @Model.User.FullName:</h3>
+        <hr />
+
+        @foreach (var comment in @Model.Comments)
+        {
+            <h3>@comment.Text</h3>
+            <br />
+        }
+</body>
+</html>

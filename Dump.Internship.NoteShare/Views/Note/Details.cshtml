@@ -1,0 +1,49 @@
+﻿@model Dump.Internship.NoteShare.Models.Note
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h3>@Model.Title</h3>
+
+        <small>@Model.CreatedOn.ToShortDateString() by: <a href="/user-details/@Model.Author.Id">@Model.Author.FullName</a></small>
+
+        <p>@Model.Text</p>
+
+        <div>
+            <h5>Comments</h5>
+            @foreach (var comment in Model.Comments)
+            {
+                <div>
+                    <p><b>@comment.Author.FullName</b>: @comment.Text</p>
+                </div>
+            }
+            <div>New comment</div>
+            <form method="POST" action="/comment-create">
+
+                <input type="hidden" name="NoteId" value="@Model.Id" />
+
+                <label for="note-text">Text: </label>
+                <textarea id="note-text" name="Text"></textarea>
+
+                <br /><br />
+
+                <button type="submit">Post</button>
+
+            </form>
+        </div>
+
+        <br/><br/>
+        <a href="/note-edit/@Model.Id">Uredi</a> | <a href="/note-delete/@Model.Id">Obrisi</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@model IList<Dump.Internship.NoteShare.Models.Note>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+
+<a href="/note-create">Novi note</a>
+<a href="/user-create">Novi user</a>
+<br/><br/>
+
+<div>
+    @foreach (var note in Model)
+    {
+        <a href="/note-details/@note.Id">
+            <h3>@note.Title</h3>
+        </a>
+        <small>by @note.Author.FullName</small>
+    }
+</div>
+
+</body>
+</html>

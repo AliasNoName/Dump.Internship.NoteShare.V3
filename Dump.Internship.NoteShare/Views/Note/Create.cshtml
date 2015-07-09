@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div>
+        <form method="POST" action="/note-create">
+            
+            <label for="note-title">Title: </label>
+            <input name="Title" id="note-title" type="text"/>
+            
+            <br/><br />
+
+            <label for="note-text">Text: </label>
+            <textarea id="note-text" name="Text"></textarea>
+            
+            <br /><br />
+            
+            <button type="submit">Save</button>
+
+        </form>
+    </div>
+</body>
+</html>

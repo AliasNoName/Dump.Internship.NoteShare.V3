@@ -1,0 +1,23 @@
+﻿<h1>Novi note</h1>
+<form novalidate ng-controller="noteAddNewController" ng-submit="submit()">
+    Title : <input placeholder="Title" ng-model="new_note.Title" type="text" />
+
+    <br />
+    <br />
+
+    Text : <textarea placeholder="Text" ng-model="new_note.Text"></textarea>
+
+    <br />
+
+    <div>
+        Author :
+        <select ng-model="new_note.UserId">
+            <option ng-repeat="user in users" value="{{user.Id}}">{{user.FullName}}</option>
+        </select>
+    </div>
+
+    <br />
+
+    <input type="submit" value="Submit"/>
+</form>
+
