@@ -67,5 +67,19 @@ namespace Dump.Internship.NoteShare.Controllers.Api
             noteRepository.Create(NoteMapper.Map(note));
         }
 
+        [System.Web.Http.HttpPost]
+        public void Update(object o)
+        {
+            var str = o.ToString();
+            JObject obj = JObject.Parse(str);
+
+            var note_id = (int)obj.SelectToken("Id");
+            var note = noteRepository.Get(note_id);
+
+            note.Text = (string)obj.SelectToken("Text");
+            note.Title = (string)obj.SelectToken("Title");
+
+            noteRepository.Update(note);
+        }
     }
 }

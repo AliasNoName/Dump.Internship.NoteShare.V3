@@ -16,6 +16,10 @@ noteShareModule.config(function($routeProvider) {
     })
     .when('/addCommet/:id', {
         controller : 'noteAddCommentController'
+    })
+    .when('/editNote/:id', {
+        controller: 'noteEditController',
+        templateUrl: '/HtmlTemplates/noteEdit.html'
     });
 }).
 directive('newComment', function ()

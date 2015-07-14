@@ -142,6 +142,7 @@
     <Content Include="HtmlTemplates\newComment.html" />
     <Content Include="HtmlTemplates\noteAddnew.html" />
     <Content Include="HtmlTemplates\noteDetails.html" />
+    <Content Include="HtmlTemplates\noteEdit.html" />
     <Content Include="HtmlTemplates\notesList.html" />
     <Content Include="Scripts\src\application.js" />
     <Content Include="Scripts\src\controllers.js" />
