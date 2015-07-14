@@ -6,7 +6,7 @@
     <li>Dovršiti stranicu detalja pojedinog notea. Nedostaje izlist i dodavanje komentara. - DONE</li>
     <li>Napraviti stranicu za dodavanje novog notea. - DONE</li>
     <li>Napraviti stranicu za uređivanje postojećeg notea. - DONE</li>
-    <li>Brisanje postojećeg notea</li>
+    <li>Brisanje postojećeg notea - DONE</li>
   </ul>
 </div>
 
