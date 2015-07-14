@@ -34,5 +34,7 @@
 <br /><br /><br /><br />
 <div style="float:right;">
     <a href="#/editNote/{{note.Id}}">Edit note</a>
-    <button>Delete note</button>
+    <form name="delete" ng-controller="noteDeleteController" ng-submit="delete_req()">
+        <input type="submit" value="Delete note!" />
+    </form>
 </div>

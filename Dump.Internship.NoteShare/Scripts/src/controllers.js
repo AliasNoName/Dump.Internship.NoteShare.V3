@@ -39,11 +39,11 @@
         $http.post('api/NotesApi/Add', $scope.new_note)
         .success(function ()
         {
-            window.location('/');
+            window.location = "/#" + "/";
         })
         .error(function ()
         {
-            window.location('/');
+            window.location = "/#" + "/";
         });
     }
 })
@@ -108,7 +108,19 @@
             $http.post('api/NotesApi/Update', $scope.note).
                 success(function ()
                 {
-                    window.location = "/#" + "/note/" + $scope.noteId;
+                    window.location = "/#" + "/note/" + $scope.noteId; //ako ostavim samo /#/note popizdi???
                 });
     }
+})
+
+.controller('noteDeleteController', function ($scope,$http, $routeParams)
+{
+    $scope.delete_req = function()
+    {
+        $http.get('api/NotesApi/Delete/' + $routeParams.id)
+        .success(function () {
+            window.location = "/#" + "/";
+        });
+    }
+    
 });

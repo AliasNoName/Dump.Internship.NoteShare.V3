@@ -81,5 +81,11 @@ namespace Dump.Internship.NoteShare.Controllers.Api
 
             noteRepository.Update(note);
         }
+
+        [System.Web.Http.HttpGet]
+        public void Delete(int id)
+        {
+            noteRepository.Delete(id);
+        }
     }
 }
